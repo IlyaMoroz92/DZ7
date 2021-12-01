@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=, initial-scale=1.0"> -->
+    <title>DZ7</title>
+    </head>
+<body>
+    <script>
+        let a = Number(prompt("введите a: "));
+let n = Number(prompt("введите n: "));
+let x = Number(prompt("введите x: "));
+let k = n;
+ 
+const factorial = (n) => {
+    if (n === 0) {
+        return 1;
+    } else {
+        return n * factorial(n-1);
+    }
+}
+ 
+let sum = 0;
+for (k; k>=0; k--) {
+ 
+let firstNum = (factorial(n) / (factorial(k) * factorial(n-k))) * Math.pow(x, k) * Math.pow(a, (n - k));
+sum = firstNum + sum;
+}
+let right = sum;
+let left = Math.pow((x+a), n);
+ 
+if (left === right) {
+alert(true);
+} else {
+alert(false);
+}
+    </script>
+</body>
+</html>
